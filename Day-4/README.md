@@ -36,71 +36,41 @@ Install Docker:
 
 We installed Docker using the following commands:
 
-bash
-Copy
-Edit
 sudo apt-get update -y
 sudo apt-get install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
 Build Docker Image: We built the Docker image for the web application:
 
-bash
-Copy
-Edit
 docker image build -t <name> .
 Run Docker Container: We ran the Docker container, exposing port 80:
 
-bash
-Copy
-Edit
 docker run -d --name <container> -p <host_port>:80 <image>
-🔧 Managing Docker Containers
+Managing Docker Containers
 We practiced managing Docker containers using various commands:
 
 View Running Containers:
 
-bash
-Copy
-Edit
 docker ps
 View Logs:
 
-bash
-Copy
-Edit
 docker logs <container>
 Pause, Unpause, Stop, Restart, Remove Containers:
 
 Pause:
 
-bash
-Copy
-Edit
 docker pause <container>
 Unpause:
 
-bash
-Copy
-Edit
 docker unpause <container>
 Stop:
 
-bash
-Copy
-Edit
 docker stop <container>
 Restart:
 
-bash
-Copy
-Edit
 docker restart <container>
 Remove:
 
-bash
-Copy
-Edit
 docker rm <container>
  Accessing Deployed Application
 After successfully deploying the container on port 81, we configured the AWS security groups to allow external traffic and accessed the application using the public IP and port.
@@ -113,30 +83,18 @@ We created a DockerHub account and learned how to push and pull Docker images to
 
 Tag and Push Docker Image:
 
-bash
-Copy
-Edit
 docker tag green-v2:latest akarsha895/green-v2:latest
 docker push akarsha895/green-v2:latest
 Pull Docker Image: We practiced pulling images from DockerHub:
 
-bash
-Copy
-Edit
 docker pull akarsha895/green-v2:latest
  Deploying Public Docker Images
 We explored deploying public Docker images directly from GitHub repositories, such as daviddocker526/ipl:
 
 Accessing Deployed Images: We accessed the deployed application using its public IP:
 
-text
-Copy
-Edit
 http://3.39.226.214:86/
 Accessing Running Containers: We used the following command to interact with the container’s shell:
 
-bash
-Copy
-Edit
 docker exec -it <container> bash
 This allowed us to navigate the deployed application files.
