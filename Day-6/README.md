@@ -25,40 +25,69 @@ This session focused on Kubernetes deployment and service configuration using YA
 
 ### Deployment YAML:
 apiVersion: apps/v1
+
 kind: Deployment
+
 metadata:
+
 name: blue-deploy
+
 namespace: blue-ns
+
 spec:
+
 replicas: 5
+
+
 selector:
 matchLabels:
+
 app: ipl
+
 template:
+
 metadata:
+
 labels:
+
 app: ipl
+
 spec:
 containers:
+
 - name: c-1
+- 
 image: daviddocker526/ipl-srh:latest
+
 ports:
 - containerPort: 80
 
   
 ### Service YAML:
 apiVersion: v1
+
 kind: Service
+
 metadata:
+
 name: blue-service
+
 namespace: blue-ns
+
 spec:
+
 selector:
+
 app: ipl
+
 ports:
 - protocol: TCP
+  
 port: 80
+
+
 targetPort: 80
+
 type: LoadBalance
 
 
@@ -90,18 +119,28 @@ kubectl delete svc blue-service -n blue-ns
 
 1. **Update system and install dependencies**:
 sudo su
+
 apt update -y
+
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
 sudo apt-get update
+
 sudo apt-get install jenkins
+
 sudo apt install default-jdk -y
 
-2. **Install AWS CLI and kubectl on Jenkins server**:
+3. **Install AWS CLI and kubectl on Jenkins server**:
 sudo apt install unzip -y
+
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
 unzip awscliv2.zip
+
 sudo ./aws/install
+
 aws configure
 
 ---
