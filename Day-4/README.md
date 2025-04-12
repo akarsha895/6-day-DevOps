@@ -27,6 +27,8 @@ RUN apt-get install apache2 -y
 COPY . /var/www/html
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
+
+```
  EC2 Ubuntu Instance Setup
 We launched an EC2 Ubuntu instance and installed Docker to containerize the application. We followed these steps:
 
