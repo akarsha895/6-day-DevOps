@@ -56,8 +56,7 @@ spec:
 containers:
 
 - name: c-1
-- 
-image: daviddocker526/ipl-srh:latest
+- image: daviddocker526/ipl-srh:latest
 
 ports:
 - containerPort: 80
