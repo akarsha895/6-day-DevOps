@@ -58,5 +58,4 @@ This lab gave us practical exposure to using AWS, which is critical for implemen
 ## Conclusion
 Day 1 of the DevOps training provided an insightful introduction to DevOps practices and principles. The hands-on experience with AWS and IAM setup was also valuable in understanding the real-world application of DevOps in cloud environments. We are now well-equipped with the fundamental knowledge to dive deeper into DevOps tools and practices in upcoming sessions.
 
-## Next Steps
-- On Day 2, we will explore more advanced topics, including setting up CI/CD pipelines and integrating additional monitoring and security tools in the DevOps pipeline.
+
