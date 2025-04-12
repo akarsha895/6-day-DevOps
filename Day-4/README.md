@@ -39,64 +39,87 @@ Install Docker:
 We installed Docker using the following commands:
 
 sudo apt-get update -y
+
 sudo apt-get install -y docker.io
+
 sudo systemctl enable docker
+
 sudo systemctl start docker
+
 Build Docker Image: We built the Docker image for the web application:
 
 docker image build -t <name> .
+
 Run Docker Container: We ran the Docker container, exposing port 80:
 
 docker run -d --name <container> -p <host_port>:80 <image>
+
 Managing Docker Containers
+
 We practiced managing Docker containers using various commands:
 
 View Running Containers:
 
 docker ps
+
 View Logs:
 
 docker logs <container>
+
 Pause, Unpause, Stop, Restart, Remove Containers:
 
 Pause:
 
 docker pause <container>
+
 Unpause:
 
 docker unpause <container>
+
 Stop:
 
 docker stop <container>
+
 Restart:
 
 docker restart <container>
+
 Remove:
 
 docker rm <container>
+
  Accessing Deployed Application
+ 
 After successfully deploying the container on port 81, we configured the AWS security groups to allow external traffic and accessed the application using the public IP and port.
 
 Security Group Configuration
+
 We ensured that the security group allowed traffic on port 81, enabling access to the web application from external networks.
 
  DockerHub Integration
+ 
 We created a DockerHub account and learned how to push and pull Docker images to and from DockerHub:
 
 Tag and Push Docker Image:
 
 docker tag green-v2:latest akarsha895/green-v2:latest
+
 docker push akarsha895/green-v2:latest
+
 Pull Docker Image: We practiced pulling images from DockerHub:
 
 docker pull akarsha895/green-v2:latest
+
  Deploying Public Docker Images
+ 
 We explored deploying public Docker images directly from GitHub repositories, such as daviddocker526/ipl:
 
 Accessing Deployed Images: We accessed the deployed application using its public IP:
 
 http://3.39.226.214:86/
+
 Accessing Running Containers: We used the following command to interact with the container’s shell:
 
-docker exec -it <container> bash
+docker exec -it <container> 
+
 This allowed us to navigate the deployed application files.
