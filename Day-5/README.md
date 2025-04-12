@@ -104,7 +104,7 @@ eksctl create cluster --name blue-cluster --region sa-east-1 --zone sa-east-1a,s
 
 ---
 
-## 🏷️ Kubernetes Namespace Creation
+## Kubernetes Namespace Creation
 
 ### Imperative Method
 kubectl create namespace white
@@ -122,7 +122,7 @@ Apply the YAML file:
 
 ---
 
-## 🖥️ Create a Pod Using YAML
+##  Create a Pod Using YAML
 
 Create a YAML file (`blue-pod.yaml`) with the following content:
 apiVersion: v1
@@ -140,7 +140,7 @@ ports:
 
 ---
 
-## 🔁 ReplicaSet
+## ReplicaSet
 
 Create a YAML file (`white-replica.yaml`) with the following content:
 apiVersion: apps/v1
@@ -168,7 +168,7 @@ ports:
 
 ---
 
-## 🧩 Alternative: Use KillerCoda Playground
+## Alternative: Use KillerCoda Playground
 
 For an alternative setup, use Kubernetes 1.32 lab on KillerCoda Playground. Login with Google; each session lasts for one hour.
 
